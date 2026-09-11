@@ -16,7 +16,7 @@ body {
 
 /* The gold Intel image creates a strong visual introduction. */
 header {
-	min-height: 78vh;
+	min-height: 100vh;
 	padding: 64px 8%;
 	display: flex;
 	align-items: center;
