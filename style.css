@@ -5,6 +5,8 @@
 
 html {
 	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
+  scroll-padding-top: 10px;
 }
 
 body {
@@ -107,12 +109,19 @@ section > div {
 	padding: 24px;
 	background: #ffffff;
 	border-left: 5px solid #0071c5;
+	box-shadow: 0 8px 18px rgba(8, 17, 31, 0.12);
+	transition: transform 220ms ease, box-shadow 220ms ease;
+	scroll-snap-align: start;
+}
+
+section > div:hover,
+section > div:focus-within {
+	transform: translateY(-8px);
+	box-shadow: 0 16px 28px rgba(8, 17, 31, 0.2);
 }
 
 section > div img {
-  width: 100%;
-  max-width: 600px;
-  height: 220px;
+  max-width: 100%;
   object-fit: cover;
   display: block;
   margin: 20px 0;
